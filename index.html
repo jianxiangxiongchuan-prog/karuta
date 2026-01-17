@@ -4,35 +4,18 @@
   <meta charset="UTF-8">
   <title>Karuta Game</title>
 
-  <!-- スマホ対応 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
   <style>
     body {
-      margin: 0;
+      margin: 0;          /* ← これが超重要 */
       padding: 0;
-      background: #f5f5dc;
       overflow: hidden;
-      touch-action: manipulation; /* 長押し無効 */
-    }
-
-    canvas {
-      display: block;
-      margin: auto;
+      background: #f5f5dc;
     }
   </style>
-</head>
 
-<body>
-
-  <!-- Phaser -->
   <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+</head>
+<body>
   <script src="main.js"></script>
-
-  <!-- 右クリック・長押し拡大を完全無効化 -->
-  <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-  </script>
-
 </body>
 </html>
