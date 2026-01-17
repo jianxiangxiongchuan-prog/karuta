@@ -81,7 +81,18 @@ function create() {
 function showTitle() {
   this.children.removeAll();
 
-  this.add.image(400, 300, "titleBg").setDepth(100);
+  const bg =this.add.image(0, 0, "titleBg").setOrigin(0);
+
+  const scaleX = this.scale.width / bg.width;
+  const scaleY = this.scale.height / bg.height;
+  const scale = Math.max(scaleX, scaleY);
+
+  bg.setScale(scale);
+
+  bg.setPosition(
+    (this.scale.width - bg.displayWidth) / 2,
+    (this.scale.height - bg.displayHeight) / 2,
+  );
 
   this.add.text(400, 150, "美祢×台湾かるたゲーム", {
     fontSize: "36px",
