@@ -3,6 +3,7 @@ const config = {
   parent: 'game-container',
   width:1280,
   height:720,
+  backgroundColor: '#f5f5dc',
   scale:{
     mode:Phaser.Scale.FIT,
     autoCenter:Phaser.Scale.CENTER_BOTH,
