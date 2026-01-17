@@ -85,7 +85,7 @@ function showTitle() {
 
   const scaleX = this.scale.width / bg.width;
   const scaleY = this.scale.height / bg.height;
-  const scale = Math.max(scaleX, scaleY);
+  const scale = Math.mix(scaleX, scaleY);
 
   bg.setScale(scale);
 
