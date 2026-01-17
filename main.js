@@ -1,14 +1,9 @@
 const config = {
   type: Phaser.AUTO,
-  parent: 'game-container',
-  width:700,
-  height:400,
-  backgroundColor: '#f5f5dc',
-  scale:{
-    mode:Phaser.Scale.RESIZE,
-    autoCenter:Phaser.Scale.CENTER_BOTH,
-  },
-  scene: { preload, create}
+  width: 800,
+  height: 600,
+  backgroundColor: "#f5f5f5",
+  scene: { preload, create }
 };
 
 new Phaser.Game(config);
@@ -67,8 +62,8 @@ function preload() {
     this.load.audio(`voice${i}`, `assets/sounds/${i}.wav`);
   }
 
-  this.load.audio("wrong.mp3", "assets/wrong.mp3");
-  this.load.audio("correct.wav", "assets/correct.wav");
+  this.load.audio("wrong", "assets/wrong.wav");
+  this.load.audio("correct", "assets/correct.wav");
 }
 
 function create() {
@@ -81,18 +76,7 @@ function create() {
 function showTitle() {
   this.children.removeAll();
 
-  const bg =this.add.image(0, 0, "titleBg").setOrigin(0);
-
-  const scaleX = this.scale.width / bg.width;
-  const scaleY = this.scale.height / bg.height;
-  const scale = Math.mix(scaleX, scaleY);
-
-  bg.setScale(scale);
-
-  bg.setPosition(
-    (this.scale.width - bg.displayWidth) / 2,
-    (this.scale.height - bg.displayHeight) / 2,
-  );
+  this.add.image(400, 300, "titleBg").setDepth(100);
 
   this.add.text(400, 150, "美祢×台湾かるたゲーム", {
     fontSize: "36px",
@@ -100,10 +84,9 @@ function showTitle() {
   }).setOrigin(0.5).setDepth(101);
 
   const levels = [
-    { text: "かんたん", time: 7000 },
-    { text: "ふつう", time: 4000 },
-    { text: "むずかしい", time: 2500 },
-    { text: "めいじん", time: 1500 }
+    { text: "かんたん（7秒）", time: 7000 },
+    { text: "ふつう（4秒）", time: 4000 },
+    { text: "むずかしい（2.5秒）", time: 2500 }
   ];
 
   levels.forEach((lvl, i) => {
@@ -131,8 +114,8 @@ function startGame() {
   this.cpuScore = 0;
   this.isWaiting = false;
 
-  this.wrongSound = this.sound.add("wrong.mp3");
-  this.correctSound = this.sound.add("correct.wav");
+  this.wrongSound = this.sound.add("wrong");
+  this.correctSound = this.sound.add("correct");
 
   this.scoreText = this.add.text(20, 20,
     "あなた: 0　CPU: 0",

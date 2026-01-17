@@ -5,22 +5,17 @@
   <title>Karuta Game</title>
 
   <!-- スマホ対応 -->
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <style>
-   html, body {
+    body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
       background: #f5f5dc;
       overflow: hidden;
       touch-action: manipulation; /* 長押し無効 */
     }
-#game-container {
-      width:100vw;
-      height:100vh;
-}
+
     canvas {
       display: block;
       margin: auto;
@@ -29,7 +24,6 @@
 </head>
 
 <body>
-  <div id="game-container"></div>
 
   <!-- Phaser -->
   <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
