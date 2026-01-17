@@ -1,8 +1,8 @@
 const config = {
   type: Phaser.AUTO,
   parent: 'game-container',
-  width:900,
-  height:720,
+  width:700,
+  height:400,
   backgroundColor: '#f5f5dc',
   scale:{
     mode:Phaser.Scale.RESIZE,
