@@ -1,8 +1,13 @@
 const config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
   backgroundColor: "#f5f5f5",
+
+  scale:{
+    mode:Phaser.Scale.FIT,
+    autoCenter:Phaser.Scale.CENTER_BOTH,
+    width: 800,
+    height: 600
+  },
   scene: { preload, create }
 };
 
