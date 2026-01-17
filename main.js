@@ -120,8 +120,8 @@ function startGame() {
   this.cpuScore = 0;
   this.isWaiting = false;
 
-  this.wrongSound = this.sound.add("wrong");
-  this.correctSound = this.sound.add("correct");
+  this.wrongSound = this.sound.add("wrong.mp3");
+  this.correctSound = this.sound.add("correct.wav");
 
   this.scoreText = this.add.text(20, 20,
     "あなた: 0　CPU: 0",
