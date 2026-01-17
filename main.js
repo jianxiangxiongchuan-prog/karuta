@@ -67,8 +67,8 @@ function preload() {
     this.load.audio(`voice${i}`, `assets/sounds/${i}.wav`);
   }
 
-  this.load.audio("wrong", "assets/wrong.wav");
-  this.load.audio("correct", "assets/correct.wav");
+  this.load.audio("wrong.mp3", "assets/wrong.mp3");
+  this.load.audio("correct.wav", "assets/correct.wav");
 }
 
 function create() {
@@ -89,9 +89,10 @@ function showTitle() {
   }).setOrigin(0.5).setDepth(101);
 
   const levels = [
-    { text: "かんたん（7秒）", time: 7000 },
-    { text: "ふつう（4秒）", time: 4000 },
-    { text: "むずかしい（2.5秒）", time: 2500 }
+    { text: "かんたん", time: 7000 },
+    { text: "ふつう", time: 4000 },
+    { text: "むずかしい", time: 2500 },
+     { text: "めいじん", time: 1500 }
   ];
 
   levels.forEach((lvl, i) => {
