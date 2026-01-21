@@ -89,10 +89,10 @@ function showTitle() {
   }).setOrigin(0.5).setDepth(101);
 
   const levels = [
-    { text: "かんたん", time: 9000 },
-    { text: "ふつう", time: 7000 },
-    { text: "むずかしい", time: 5000 },
-     { text: "めいじん", time: 4000 }
+    { text: "かんたん", time: 8000 },
+    { text: "ふつう", time: 6000 },
+    { text: "むずかしい", time: 4500 },
+     { text: "めいじん", time: 3500 }
   ];
 
   levels.forEach((lvl, i) => {
